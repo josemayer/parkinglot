@@ -7,4 +7,4 @@ A simple program that uses stack to manage a parking lot.
 |   +X  |         Add X to input        |                |
 |   #   | Park element in arrival order |     X: e>g     |
 |   -X  |        Add X to output        | ... X: g>s ... |
-|   $s  |  Write outputs to garagem.txt |                |
+|   $   |  Write outputs to garagem.txt |                |
