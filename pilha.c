@@ -40,6 +40,27 @@ item topoDaPilha(pilha * p){
         return (p->v[p->topo - 1]);
 }
 
+int posicaoNaPilha(pilha * p, item x){
+    int i;
+    if(!pilhaVazia(p)){
+        for (i = 0; i < p->topo; i++){
+            if(p->v[i] == x){
+                return i;
+            }
+        }
+    }
+    return -1;
+}
+
+item * garagemFinal(pilha * p){
+    int i;
+    item * estadoGar = malloc(p->topo * sizeof(item));
+    for(i = 0; i < p->topo; i++){
+        estadoGar[i] = p->v[i];
+    }
+    return estadoGar;
+}
+
 /* Dobra o tamanho da pilha */
 pilha * aumentaPilha (pilha * p){
   item * w = malloc(2 * p->tam * sizeof(item)); 
@@ -50,4 +71,4 @@ pilha * aumentaPilha (pilha * p){
   free(p->v);
   p->v = w;
   return (p); 
-} 
+}

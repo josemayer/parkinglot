@@ -13,4 +13,6 @@ void empilha(pilha * p, item x);
 item desempilha(pilha * p);
 int pilhaVazia(pilha * p);
 item topoDaPilha(pilha * p);
+int posicaoNaPilha(pilha *p, item x);
+item * garagemFinal(pilha * p);
 pilha * aumentaPilha(pilha * p);
